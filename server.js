@@ -7,14 +7,14 @@ app.use( bodyParser.json() );
 
 app.get('/getSample', function (req, res) {
 
-  const client = impala.createClient();
-  client.connect({
-  host: 'zmaq-3.vpc.cloudera.com',
-  port: 21000,
-  resultType: 'json-array'
-  }); 
+    const client = impala.createClient();
+    client.connect({
+    host: 'zmaq-3.vpc.cloudera.com',
+    port: 21000,
+    resultType: 'json-array'
+    }); 
 
-  client.query('SELECT * FROM kudu_users limit 5;').then(function(data) {
+    client.query('SELECT * FROM kudu_users limit 5;').then(function(data) {
   	console.log(data);
   	res.send(data)})
     .catch(function(err) {console.error(err)})
