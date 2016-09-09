@@ -28,7 +28,7 @@ Example app listening at http://:::8081
 
 If the server starts successfully, you will see the message that app is listening at the port specified in server.js. When you want to shutdown the server, simply type 'ctrl-c'.
 
-** Get a sample of 5 blacklisted users **
+**Get a sample of 5 blacklisted users**
 ```
 gmedasani-mac:~ gmedasani$ curl http://127.0.0.1:8081/getSample
 [{"ip":"1.126.108.138","uid":"20271"},
