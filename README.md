@@ -39,7 +39,7 @@ gmedasani-mac:~ gmedasani$ curl http://127.0.0.1:8081/getSample
 gmedasani-mac:~ gmedasani$
 ```
 
-** Make a request without passing in the IP address to be verified**
+**Make a request without passing in the IP address to be verified**
 ```
 gmedasani-mac:~ gmedasani$ curl -H "Content-Type: application/json" -X POST -d '{ }' http://127.0.0.1:8081/getUser
 { "status":400,
@@ -48,7 +48,7 @@ gmedasani-mac:~ gmedasani$ curl -H "Content-Type: application/json" -X POST -d '
 gmedasani-mac:~ gmedasani$
 ```
 
-** Make a request with passing a blacklisted ip address**
+**Make a request with passing a blacklisted ip address**
 ```
 gmedasani-mac:~ gmedasani$ curl -H "Content-Type: application/json" -X POST -d '{ "ip": "1.229.247.161"}' http://127.0.0.1:8081/getUser
 {"status":200,
@@ -59,7 +59,7 @@ gmedasani-mac:~ gmedasani$ curl -H "Content-Type: application/json" -X POST -d '
 gmedasani-mac:~ gmedasani$
 ```
 
-** Make a request with passing a non blacklisted ip address**
+**Make a request with passing a non blacklisted ip address**
 ```
 gmedasani-mac:~ gmedasani$ curl -H "Content-Type: application/json" -X POST -d '{ "ip": "1.229.247.141"}' http://127.0.0.1:8081/getUser
 {"status":200,
